@@ -1,0 +1,28 @@
+{
+  "name": "proyectofb",
+  "version": "1.0.0",
+  "description": "Es un proyecto para fron y back end",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JosueMixalis/proyectofb.git"
+  },
+  "author": "Josue Mixalis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JosueMixalis/proyectofb/issues"
+  },
+  "homepage": "https://github.com/JosueMixalis/proyectofb#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "jquery": "^3.7.1",
+    "popper.js": "^1.16.1"
+  }
+}
