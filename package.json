@@ -1,10 +1,11 @@
 {
   "name": "proyectofb",
   "version": "1.0.0",
-  "description": "Es un proyecto para fron y back end"",
+  "description": "Es un proyecto para fron y back end",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/JosueMixalis/proyectofb/issues"
   },
-  "homepage": "https://github.com/JosueMixalis/proyectofb#readme"
+  "homepage": "https://github.com/JosueMixalis/proyectofb#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
 }
