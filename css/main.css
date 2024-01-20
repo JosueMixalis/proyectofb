@@ -1,11 +1,18 @@
 body{
     background-color: orange;
+    margin-top: 50px;
 }
 
 .jumbotron{
     text-align: center;
     background-color: rgb(197, 73, 73);
     color: orange;
+}
+
+.card-banco {
+    flex: 1 200px;
+    margin-top: 10px;
+
 }
 
 .banco-productos {
