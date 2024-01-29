@@ -35,7 +35,31 @@
           <li class="breadcrumb-item active" aria-current="page">Home</li>
         </ol>
       </nav>
-      <img src="images/banner.jpg" class="banner img-fluid rounded mx-auto d-block" alt="banner">
+
+      <!--Carousel-->
+      <div class="carousel slide" id="carouselBank" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item">
+            <img src="images/banner.jpg" class="d-block w-100" alt="Primer slide">
+          </div>
+          <div class="carousel-item active" >
+            <img src="images/banner2.jpg" class="d-block w-100" alt="Segundo slide">
+          </div>
+          <div class="carousel-item">
+            <img src="images/banner3.jpg" class="d-block w-100" alt="Tercer slide">
+          </div>
+        </div>
+        <a href="#carouselBank" role="button" data-slide="next" class="carousel-control-prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a href="#carouselBank" data-slide="next" role="button" class="carousel-control-next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Siguiente</span>
+        </a>
+      </div>
+
+      <!--Servicios-->
       <div class="row">
         <div class="col-sm-4">
           <h3>Adquiera una tarjeta</h3>
@@ -59,6 +83,10 @@
       </div>
         <hr>
 
+
+            
+
+      <!--Cards-->
       <div class="d-flex flex-wrap flex-row-reverse">
           <div class="card card-banco  d-flex flex-column justify-content-between ml-2">
             <img src="images/credit-card.jpg" class="card-img-top" alt="Responsive image">
@@ -69,7 +97,7 @@
               </p>
             </div>
             <div>
-            <button class="btn btn-primary btn-adquirir"><i class="bi bi-bag-heart-fill"></i>Adquirir</button>
+            <button class="btn btn-primary btn-adquirir" data-toggle="modal" data-target="#adquerirInfo"><i class="bi bi-bag-heart-fill"></i>Adquirir</button>
             </div>
           </div>
           <div class="card card-banco d-flex flex-column justify-content-between ml-2">
@@ -79,7 +107,7 @@
               <p class="card-text">Adquiera su tarjeta debito virtual o fisica </p>
             </div>
             <div>
-              <button class="btn btn-primary btn-adquirir"><i class="bi bi-bag-heart-fill"></i>Adquirir</button>
+              <button class="btn btn-primary btn-adquirir" data-toggle="modal" data-target="#adquerirInfo"><i class="bi bi-bag-heart-fill"></i>Adquirir</button>
             </div>
           </div>
           <div class="card card-banco d-flex flex-column justify-content-between ml-2">
@@ -91,7 +119,7 @@
               </p>
             </div>
             <div>
-              <button class="btn btn-primary btn-adquirir"><i class="bi bi-bag-heart-fill"></i>Adquirir</button>
+              <button class="btn btn-primary btn-adquirir" data-toggle="modal" data-target="#adquerirInfo"><i class="bi bi-bag-heart-fill"></i>Adquirir</button>
             </div>
           </div>
           <div class="card card-banco d-flex flex-column justify-content-between ml-2">
@@ -104,7 +132,7 @@
               </p>
             </div>
             <div>
-              <button class="btn btn-primary btn-adquirir"><i class="bi bi-bag-heart-fill"></i>Adquirir</button>
+              <button class="btn btn-primary btn-adquirir" data-toggle="modal" data-target="#adquerirInfo"><i class="bi bi-bag-heart-fill"></i>Adquirir</button>
             </div>
           </div>
           <div class="card card-banco d-flex flex-column justify-content-between ml-2">
@@ -116,9 +144,42 @@
               </p>
             </div>
             <div>
-              <button class="btn btn-primary btn-adquirir"><i class="bi bi-bag-heart-fill"></i>Adquirir</button>
+              <button class="btn btn-primary btn-adquirir" data-toggle="modal" data-target="#adquerirInfo"><i class="bi bi-bag-heart-fill"></i>Adquirir</button>
             </div>
           </div>
+      </div>
+    </div>
+    <!--Modal-->
+    <div class="modal fade" id="adquerirInfo" tabindex="-1" role="dialog" aria-labelledby="adquerirModal"
+    aria-hidden="true" >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="adquerirModal">Datos para informacion</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="info-email" class="col-form-label">resgitre un email:</label>
+                <input type="text" id="info-email" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="info-telefono" class="col-form-label">registre su numero telefonico:</label>
+                <input type="tel" id="info-telefono" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="col-form-label">Mensaje:</label>
+                <textarea id="message-text" class="form-control"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success">Enviar</button>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -148,6 +209,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
     <!--<script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/popper.js/dist/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>-->
