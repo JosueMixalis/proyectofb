@@ -5,7 +5,14 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "lite-server"
+    "dev": "lite-server",
+    "start": "concurrently \"npm run watch:scss\" \"npm run dev \"",
+    "scss": "sass --watch css/:css/",
+    "watch:scss": "onchange 'css/*.scss' -- npm run scss",
+    "clean": "rimraf dist",
+    "imagemin": "imagemin images/* --out-dir dist/images ",
+    "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html && usemin about.html -d dist --htmlmin -o dist/about.html && usemin precios.html -d dist --htmlmin -o dist/precios.html && usemin contacto.html -d dist --htmlmin -o dist/contacto.html",
+    "build": "npm run clean && npm run scss && npm run imagemin && npm run usemin"
   },
   "repository": {
     "type": "git",
@@ -18,10 +25,32 @@
   },
   "homepage": "https://github.com/JosueMixalis/proyectofb#readme",
   "devDependencies": {
-    "lite-server": "^2.6.1"
+    "browser-sync": "^3.0.2",
+    "copyfiles": "^2.4.1",
+    "del": "^7.1.0",
+    "grunt": "^1.6.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-clean": "^2.0.1",
+    "grunt-contrib-concat": "^2.1.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^5.0.0",
+    "grunt-contrib-imagemin": "^4.0.0",
+    "grunt-contrib-sass": "^2.0.0",
+    "grunt-contrib-uglify": "^5.2.2",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-filerev": "^2.3.1",
+    "grunt-usemin": "^3.1.1",
+    "jit-grunt": "^0.10.0",
+    "lite-server": "^2.6.1",
+    "onchange": "^7.1.0",
+    "rimraf": "^5.0.5",
+    "sass": "^1.70.0",
+    "time-grunt": "^2.0.0",
+    "usemin": "^0.6.0"
   },
   "dependencies": {
     "bootstrap": "^5.3.2",
+    "concurrently": "^8.2.2",
     "bootstrap-icons": "^1.11.3",
     "jquery": "^3.7.1",
     "popper.js": "^1.16.1"
